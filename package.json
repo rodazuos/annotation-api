@@ -1,0 +1,38 @@
+{
+  "name": "backend-service-starter",
+  "version": "0.0.0",
+  "description": "Boilerplate para serviço de backend",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "format:check": "prettier --check .",
+    "format:write": "prettier --write .",
+    "lint:check": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "test": "jest --coverage --passWithNoTests"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn test --passWithNoTests"
+    }
+  },
+  "lint-staged": {
+    "*.{js}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "repository": "git@github.com:rodazuos/movie-api.git",
+  "author": "Rodrigo Souza <rodrigoteixeirasouza@gmail.com>",
+  "license": "UNLICENSED",
+  "private": true,
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "lint-staged": "^15.2.2",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "husky": "^9.0.11",
+    "prettier": "^3.2.5"
+  }
+}
