@@ -1,3 +1,3 @@
-# Boilerplate para serviço de backend
+# API for daily note taking
 
-Boilerplate simples com configuração de Eslint, Prettier, Husky, LintStaged e Jest.
+Information annotation service
