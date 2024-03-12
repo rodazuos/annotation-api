@@ -1,19 +1,17 @@
 const mongoose = require("mongoose");
 
+const { annotationSchema } = require('./schemas/annotation');
+
 const { DB_HOST, DB_PORT, DB_DATABASE } = process.env;
 
 module.exports = () => {
-    const mongoDbInstance = async () => {
-        return  mongoose.connect(`mongodb://${DB_HOST}:${DB_PORT}/${DB_DATABASE}`);
-    }
+    const conn = mongoose.createConnection(`mongodb://${DB_HOST}:${DB_PORT}/${DB_DATABASE}`);
 
-    const isConnected = async (instance) => {
-        return instance.connection.readyState === mongoose.STATES.connected;
-    }
+    conn.model('Annotation', annotationSchema);
 
     return {
-        mongoDbInstance,
-        isConnected
+        mongoConnection: conn,
+        models: conn.models
     }
 
 }
