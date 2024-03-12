@@ -1,14 +1,14 @@
 const koaRouter = require("@koa/router");
 
-module.exports = ({ healthcheckController, noteController }) => {
+module.exports = ({ healthcheckController, annotationController }) => {
   const router = new koaRouter();
 
   router.get("/healthcheck", healthcheckController.check);
 
-  router.post("/v1/note", noteController.create);
-  router.put("/v1/note/:id", noteController.update);
-  router.del("/v1/note/:id", noteController.remove);
-  router.get("/v1/note/list", noteController.list);
+  router.post("/v1/annotation", annotationController.create);
+  router.put("/v1/annotation/:id", annotationController.update);
+  router.del("/v1/annotation/:id", annotationController.remove);
+  router.get("/v1/annotation/list", annotationController.list);
 
   return router;
 };
