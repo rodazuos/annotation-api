@@ -12,7 +12,7 @@ Information annotation service
 
 |Path|Method|Description|
 |---|---|---|
-|/healthcheck|**GET**|Verified if application is ready|
+|/healthcheck|**GET**|Verify if application is ready|
 |/v1/annotation|**POST**|Create an annoatation|
 |/v1/annotation/_:id_|**PUT**|Update an annotation|
 |/v1/annotation/_:id_|**DEL**|Remove an annotation|
