@@ -21,6 +21,7 @@
   "lint-staged": {
     "*.{js}": [
       "prettier --write",
+      "eslint --fix",
       "git add"
     ]
   },
@@ -43,6 +44,7 @@
     "awilix": "^10.0.1",
     "dotenv": "^16.4.5",
     "http-status": "^1.7.4",
+    "joi": "^17.12.2",
     "koa": "^2.15.0",
     "koa-bodyparser": "^4.4.1",
     "mongoose": "^8.2.1"

@@ -19,7 +19,7 @@ container.register({
   annotationController: asFunction(annotationController).singleton(),
 
   dbContextFactory: asFunction(dbContextFactory).singleton(),
-  repository: asFunction(repositories).singleton()
+  repository: asFunction(repositories).singleton(),
 });
 
 module.exports = container;
