@@ -4,10 +4,10 @@ Information annotation service
 
 ## Used technologies
 
-    - [NodeJS](https://nodejs.org/en)
-    - [Awilix](https://www.npmjs.com/package/awilix)
-    - [Koa](https://koajs.com/)
-    - [MongoDB](https://www.mongodb.com/pt-br)
+* [NodeJS](http://nodejs.org/en)
+* [Awilix](http://npmjs.com/package/awilix)
+* [Koa](http://koajs.com)
+* [MongoDB](http://mongodb.com)
 
 ## Endpoints
 
