@@ -16,7 +16,7 @@ Information annotation service
 |/v1/annotation|**POST**|Create an annoatation|
 |/v1/annotation/_:id_|**PUT**|Update an annotation|
 |/v1/annotation/_:id_|**DEL**|Remove an annotation|
-|/v1/annotation/list?_limit=10&page=1_|**GET**|List all annotations|
+|/v1/annotation?_limit=10&page=1_|**GET**|List all annotations|
 
   - **POST - /v1/annotation**
   > Payload
