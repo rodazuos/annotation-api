@@ -17,4 +17,16 @@ jobs:
         uses: actions/setup-node@v4.0.2
         with:
           node-version: 21
-          
+
+      - name: Build image using Dockerfile
+        run: docker build -d .
+
+      - name: Build image using Dockerfile
+        uses: docker/build-push-action@v5.3.0
+        with:
+          context: .
+          file: Dockerfile
+          push: false
+          tags: |
+            rodazuos/annotation-api:main
+            rodazuos/annotation-api:teste
