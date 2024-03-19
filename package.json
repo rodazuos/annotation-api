@@ -1,7 +1,7 @@
 {
-  "name": "backend-service-starter",
+  "name": "annotation-api",
   "version": "0.0.0",
-  "description": "Boilerplate para serviço de backend",
+  "description": "API for writing down reminders",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
