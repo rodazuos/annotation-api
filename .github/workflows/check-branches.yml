@@ -1,0 +1,28 @@
+name: Check branch is valid
+
+on: 
+  push: 
+    branches: [fork]
+
+  workflow_dispatch:
+    
+jobs:
+  CI:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+   
+      - name: Setup Node.js
+        uses: actions/setup-node@v4.0.2
+        with:
+          node-version: 21
+
+      - name: Build image using Dockerfile and push on Docker Hub
+        uses: docker/build-push-action@v5.3.0
+        with:
+          context: .
+          file: Dockerfile
+          push: false
+          tags: |
+            rodazuos/annotation-api:valid-branch            
