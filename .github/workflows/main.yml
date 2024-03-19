@@ -19,9 +19,6 @@ jobs:
           node-version: 21
 
       - name: Build image using Dockerfile
-        run: docker build -d .
-
-      - name: Build image using Dockerfile
         uses: docker/build-push-action@v5.3.0
         with:
           context: .
