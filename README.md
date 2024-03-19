@@ -1,4 +1,4 @@
-![example workflow](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
+![example workflow](https://github.com/rodazuos/annotation-api/actions/workflows/main.yml/badge.svg)
 
 # API for daily note taking
 
