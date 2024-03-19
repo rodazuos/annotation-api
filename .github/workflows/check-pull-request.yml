@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     
 jobs:
-  CI:
+  Checking:
     runs-on: ubuntu-latest
 
     steps:
@@ -17,7 +17,7 @@ jobs:
         with:
           node-version: 21
 
-      - name: Build image using Dockerfile and push on Docker Hub
+      - name: Build image using Dockerfile
         uses: docker/build-push-action@v5.3.0
         with:
           context: .
