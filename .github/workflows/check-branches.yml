@@ -1,8 +1,7 @@
-name: Check branch is valid
+name: Check pull request
 
 on: 
-  push: 
-    branches: [fork]
+  pull_request:
 
   workflow_dispatch:
     
