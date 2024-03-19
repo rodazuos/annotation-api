@@ -3,18 +3,18 @@ name: Build image and push on Docker Hub
 on: 
   push: 
     branches: [main]
-  pull_request:
-    branches: [main]
 
   workflow_dispatch:
     
 jobs:
-  build:
+  CI:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
-
-      - name: Testing
-        run: echo Hello!
-    
+   
+      - name: Setup Node.js
+        uses: actions/setup-node@v4.0.2
+        with:
+          node-version: 21
+          
